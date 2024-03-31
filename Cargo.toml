@@ -1,18 +1,21 @@
 [package]
 name = "bsharp"
+authors = ["Benjamin Coons <bcoons@radioraccoon.com>"]
 version = "0.1.0"
 edition = "2021"
+publish = false
+description = """
+bsharp is a chess analysis tool that makes use of audio to provide a unique way
+of analyzing chess matches.
+"""
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-# bevy = { version = "0.13.0", features = ["dynamic_linking"] }
 pgn-reader = "*"
 shakmaty = "*"
+anyhow = "1"
+clap = { version = "4.0.0", features = ["derive"] }
 
 [profile.dev]
 opt-level = 1
-
-[profile.dev.package."*"]
-opt-level = 3
-
